@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Башхо — супермаркет</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#home"><svg viewBox="0 0 120 320" aria-hidden="true"><path d="M28 320L40 70H80L92 320Z M38 70H82V58H72V48H64V38H56V48H48V58H38Z M56 38V22H64V38Z M60 4L66 22H54Z" fill="#D4A93A"/></svg><em style="font-style:normal">Баш<span>хо</span></em></a>
+<nav id="nav"><a href="#home">Главная</a><a href="#catalog">Каталог</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+<button class="cart" id="cartBtn" onclick="location.hash='delivery'" aria-label="Корзина">🛒 <span id="cnt">0</span> · <span id="tot">0</span> ₽</button>
+</div></header>
+
+<main>
+<section class="page" id="home">
+ <div class="hero">
+  <span class="greet">Маршалла догӀийла</span><span class="bar2">Свежее каждый день</span>
+  <h1>Всё для дома — в одном месте</h1>
+  <p>Овощи с утренней поставки, фрукты и бытовая техника по честным ценам. Привезём за 60 минут.</p>
+  <a class="btn" href="#catalog">Открыть каталог</a>
+  <svg class="tower" viewBox="0 0 120 320" aria-hidden="true"><g fill="#D4A93A"><path d="M28 320L40 70H80L92 320Z"/><path d="M38 70H82V58H72V48H64V38H56V48H48V58H38Z" fill="#E8B84A"/><path d="M56 38V22H64V38Z"/><path d="M60 4L66 22H54Z"/></g><g fill="#093524"><rect x="56" y="100" width="8" height="22" rx="4"/><rect x="55" y="150" width="10" height="26" rx="5"/><rect x="54" y="205" width="12" height="30" rx="6"/><path d="M50 320V270Q60 255 70 270V320Z"/></g></svg>
+ </div>
+ <div class="perks">
+  <div class="perk"><b>Свежие овощи</b><p>Помидоры, огурцы и бананы приходят каждое утро.</p></div>
+  <div class="perk"><b>Бытовая техника</b><p>Чайники, блендеры и пылесосы с гарантией.</p></div>
+  <div class="perk"><b>Доставка за час</b><p>Бесплатно при заказе от 3 000 ₽.</p></div>
+ </div>
+ <h2>Хиты недели</h2>
+ <div class="grid" id="hits"></div>
+</section>
+
+<section class="page" id="catalog">
+ <h2>Каталог</h2>
+ <div class="tabs" id="tabs"></div>
+ <div class="grid" id="grid"></div>
+</section>
+
+<section class="page" id="delivery">
+ <h2>Доставка</h2>
+ <div class="steps">
+  <div class="step"><b>Выберите товары</b><p>Добавьте продукты и технику в корзину.</p></div>
+  <div class="step"><b>Укажите адрес</b><p>Выберите зону и удобное время.</p></div>
+  <div class="step"><b>Курьер у двери</b><p>Привезём за 60 минут, оплата при получении.</p></div>
+ </div>
+ <div class="box">
+  <h3>Оформить заказ</h3>
+  <p>Ваша корзина: <b id="dCnt">0</b> шт. на <b id="dSum">0</b> ₽</p>
+  <div class="zones" id="zones">
+   <label><input type="radio" name="z" value="0" checked> Центр<br><small>150 ₽ · 45 мин</small></label>
+   <label><input type="radio" name="z" value="1"> Спальные районы<br><small>250 ₽ · 60 мин</small></label>
+   <label><input type="radio" name="z" value="2"> Пригород<br><small>400 ₽ · 90 мин</small></label>
+  </div>
+  <div class="sum">Итого с доставкой: <span id="grand">0</span> ₽</div>
+  <p id="free" style="color:var(--mute);margin-top:0"></p>
+  <form id="f">
+   <input type="text" id="nm" placeholder="Ваше имя" required>
+   <input type="tel" id="ph" placeholder="Телефон" required>
+   <input type="text" id="ad" placeholder="Адрес доставки" required>
+   <select id="tm"><option>Как можно скорее</option><option>10:00–12:00</option><option>14:00–16:00</option><option>18:00–20:00</option></select>
+   <button class="btn alt" type="submit">Заказать доставку</button>
+   <div class="ok" id="ok"></div>
+  </form>
+ </div>
+</section>
+
+<section class="page" id="contacts">
+ <h2>Контакты</h2>
+ <div class="perks">
+  <div class="perk"><b>Адрес</b><p>Главный магазин «Башхо», ул. Центральная, 1</p></div>
+  <div class="perk"><b>Часы работы</b><p>Ежедневно с 8:00 до 23:00</p></div>
+  <div class="perk"><b>Телефон</b><p>+7 (000) 000-00-00</p></div>
+ </div>
+</section>
+</main>
+<footer><div class="orn"></div>© Башхо — супермаркет. Свежесть и честные цены.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
