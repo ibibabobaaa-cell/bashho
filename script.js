@@ -21,7 +21,7 @@ function upd(){
 }
 function add(i){cart[i]=(cart[i]||0)+1;upd()}
 document.getElementById("zones").addEventListener("change",upd);
-var ACCESS_KEY=""; // ключ с web3forms.com, приходит на вашу почту
+var ACCESS_KEY="98fee0f1-fdc4-492b-816d-bfbc010013c7"; // ключ с web3forms.com, приходит на вашу почту
 f.addEventListener("submit",function(e){e.preventDefault();
  var t=sum();
  if(!t[0]){show("Корзина пуста. Добавьте товары в каталоге.");return}
